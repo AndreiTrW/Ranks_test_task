@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p><h1>{{item.name}}</h1></p>
+    <p><h1>Цена товара:    {{price.get_display_price}}</h1></p>
+    <p><h2>Описание товара: {{item.description}}</h2></p>
+<form action="{% url 'home'%}" method="get">
+
+    <button type="submit"><h3>Home</h3></button>
+</form>
+<form action="{% url 'create-checkout-session' price.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit"><h3>Buy</h3></button>
+</form>
+</body>
+</html>

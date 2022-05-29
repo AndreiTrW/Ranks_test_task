@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>Все товары</h1>
+    <table>
+       <tr><td> <h2>Товар:</h2></td><td><h2>Цена:</h2></td></tr>
+    {% for item, price in objects %}
+        <div class="alert alert-success">
+            <tr><td>
+                <h3>
+                <a href = "/item/{{ item.id}}">{{ item.name}}</a></h3> </td> <td> <h3> {{price.get_display_price}}</h3></td>
+
+                </tr>
+        </div>
+        {% endfor %}
+</table>
+</body>
+</html>
