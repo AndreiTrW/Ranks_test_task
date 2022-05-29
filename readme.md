@@ -58,6 +58,18 @@ python3 manage.py createsuperuser
 (for MacOS and Windows users)
 
 and follow instructions to create superuser.
+<h4 align="left"> Run django test server</h4> 
+
+```bash
+python manage.py runserver
+```
+or 
+
+```bash
+python3 manage.py runserver
+```
+(for MacOS and Windows users)
+
 <h4 align="left"> Registration of items</h4> 
 Login to http://127.0.0.1:8000/admin/ and create items. Price should be entered in cents. You can get Stripe price id for each item from your stripe account
 
